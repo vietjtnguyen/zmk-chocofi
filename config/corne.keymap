@@ -356,7 +356,7 @@
     combo_ctrl_u {
       timeout-ms = <100>;
       key-positions = <20 21 40>;
-      bindings = <&kp LC(D)>;
+      bindings = <&kp LC(U)>;
     };
 
     combo_alt_bs { // doesn't work
