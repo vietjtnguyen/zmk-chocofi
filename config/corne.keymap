@@ -10,6 +10,37 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+  macros {
+    tmux_prev: tmux_prev {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&kp LC(B) P>
+        ;
+    };
+    tmux_next: tmux_next {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&kp LC(B) N>
+        ;
+    };
+    tmux_cycle_pane: tmux_cycle_pane {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&kp LC(B) O>
+        ;
+    };
+    tmux_new_window: tmux_new_window {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&kp LC(B) C>
+        ;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -112,9 +143,7 @@
     };
 
   };
-};
 
-/ {
   combos {
     compatible = "zmk,combos";
 
@@ -404,6 +433,27 @@
       timeout-ms = <100>;
       key-positions = <14 3 16>;
       bindings = <&to 1>;
+    };
+
+    combo_tmux_prev {
+      timeout-ms = <100>;
+      key-positions = <18 41>;
+      bindings = <&tmux_prev>;
+    };
+    combo_tmux_new_window {
+      timeout-ms = <100>;
+      key-positions = <19 41>;
+      bindings = <&tmux_new_window>;
+    };
+    combo_tmux_cycle_pane {
+      timeout-ms = <100>;
+      key-positions = <20 41>;
+      bindings = <&tmux_cycle_pane>;
+    };
+    combo_tmux_next {
+      timeout-ms = <100>;
+      key-positions = <21 41>;
+      bindings = <&tmux_next>;
     };
   };
 };
