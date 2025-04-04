@@ -79,8 +79,7 @@
 //     |         |         |         |         |         |         | |         |         |         |         |          |         |
 //     +---------+---------+---------+---------+---------+---------+ +---------+---------+---------+---------+----------+---------+
 //     |12       |13       |14       |15       |16       |17       | |18       |19       |20       |21       |22        |23       |
-        &trans    &bt BT_CLR
-                            &kp C_VOLUME_DOWN
+        &trans    &trans    &kp C_VOLUME_DOWN
                                       &kp C_MUTE
                                                 &kp C_VOLUME_UP
                                                           &bt BT_NXT
@@ -89,7 +88,8 @@
 //     |         |         |         |         |         |         | |         |         |         |         |          |         |
 //     +---------+---------+---------+---------+---------+---------+ +---------+---------+---------+---------+----------+---------+
 //     |24       |25       |26       |27       |28       |29       | |30       |31       |32       |33       |34        |35       |
-        &trans    &to 1     &kp C_PREV
+        &trans    &bt BT_CLR
+                            &kp C_PREV
                                       &kp C_PLAY_PAUSE
                                                 &kp C_NEXT
                                                           &bt BT_PRV
@@ -214,11 +214,6 @@
       timeout-ms = <100>;
       key-positions = <19 39 22>;
       bindings = <&kp LS(ENTER)>;
-    };
-    combo_alt {
-      timeout-ms = <50>;
-      key-positions = <38 40>;
-      bindings = <&kp LEFT_ALT>;
     };
 
     combo_grave {
@@ -367,7 +362,7 @@
       bindings = <&kp LC(U)>;
     };
 
-    combo_alt_bs { // doesn't work
+    combo_alt_bs {
       timeout-ms = <100>;
       key-positions = <40 22>;
       bindings = <&kp LA(BACKSPACE)>;
@@ -375,7 +370,22 @@
     combo_shift {
       timeout-ms = <100>;
       key-positions = <25 26>;
-      bindings = <&kp LSHIFT>;
+      bindings = <&kp LEFT_SHIFT>;
+    };
+    combo_ctrl {
+      timeout-ms = <100>;
+      key-positions = <25 36>;
+      bindings = <&kp LEFT_CONTROL>;
+    };
+    combo_ctrl_shift {
+      timeout-ms = <100>;
+      key-positions = <36 37>;
+      bindings = <&kp LC(LEFT_SHIFT)>;
+    };
+    combo_alt {
+      timeout-ms = <100>;
+      key-positions = <13 36>;
+      bindings = <&kp LEFT_ALT>;
     };
 
     combo_cmd_tab {
