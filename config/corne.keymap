@@ -382,6 +382,11 @@
       key-positions = <13 36>;
       bindings = <&kp LEFT_ALT>;
     };
+    combo_alt2 {
+      timeout-ms = <100>;
+      key-positions = <36 38>;
+      bindings = <&kp LEFT_ALT>;
+    };
 
     combo_cmd_tab {
       timeout-ms = <100>;
